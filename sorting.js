@@ -22,9 +22,21 @@ const sumEvens = (arr) => {
 console.log('sum of evens: ', sumEvens(strNums));
 
 // Find the index of the first value when added to it's index = 512 (#ATX!!)
-// const atxIdx;
+const nums = stringsToNums(strNums);
 
-// console.log(`index: ${atxIdx}, value: ${nums[atxIdx]}`);
+const atxIdx = arr => {
+  for(let i=0; i < arr.length; i++){
+    if(i + arr[i] === 512) {
+      return i
+    }
+  } 
+};
+
+
+console.log(`index: ${atxIdx(nums)}, value: ${nums[atxIdx(nums)]}`);
+
+
+
 
 const weather = [
   { id: 5743823523151872,
